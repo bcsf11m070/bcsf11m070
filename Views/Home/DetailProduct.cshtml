@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = null;
+}
+@model MvcApplication4.Models.Product
+
+
+<div class="center_content">
+    <div class="center_title_bar">@Model.Name</div>
+    <div class="prod_box_big">
+        <div class="top_prod_box_big"></div>
+        <div class="center_prod_box_big">
+            <div class="product_img_big">
+                <a href="javascript:popImage('~/images/big_pic.jpg','Some Title')" title="header=[Zoom] body=[&nbsp;] fade=[on]"><img src="@Url.Content("~/Images/uploads/"+Model.Path)" alt="" border="0" height="70" width="70" /></a>
+                <div class="thumbs"> <a href="#" title="header=[Thumb1] body=[&nbsp;] fade=[on]"><img src="~/images/thumb1.gif" alt="" border="0" /></a> <a href="#" title="header=[Thumb2] body=[&nbsp;] fade=[on]"><img src="~/images/thumb1.gif" alt="" border="0" /></a> <a href="#" title="header=[Thumb3] body=[&nbsp;] fade=[on]"><img src="~/images/thumb1.gif" alt="" border="0" /></a> </div>
+            </div>
+            <div class="details_big_box">
+                <div class="product_title_big">@Model.Name</div>
+                <div class="specifications">
+                    Category: <span class="blue">@Model.Category1</span><br />
+                    Brand: <span class="blue">@Model.Brand1</span><br />
+                    Description: <span class="blue">@Model.Description</span><br />
+                    Price: <span class="blue">@Model.Price</span><br />
+                </div>
+                <div class="prod_price_big"><span class="reduce">@(Model.Price+20)$</span> <span class="price">@Model.Price$</span></div>
+                <a href="#" class="addtocart">add to cart</a>
+            </div>
+        </div>
+        <div class="bottom_prod_box_big"></div>
+    </div>
+    </div>
+

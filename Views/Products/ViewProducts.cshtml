@@ -1,0 +1,33 @@
+﻿@model List<MvcApplication4.Models.Product>
+@{
+    Layout = "~/views/Shared/_LAdmin.cshtml";
+}
+<div class="center_content" style="padding-left:50px">
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Category</td>
+        <td>Brand</td>
+        <td>Description</td>
+        <td>Price $</td>
+        </tr>
+    @foreach(var x in Model)
+    { 
+    
+        <tr>
+        
+            <td>@x.Name</td>
+            <td>@x.Category1</td>
+            <td>@x.Brand1</td>
+            <td>@x.Description</td>
+        
+            <td>@x.Price</td>
+
+            <td>
+                <a href="/Products/Update/@x.Id">Update</a>
+                <a href="/Products/Delete/@x.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </table>
+    </div>
