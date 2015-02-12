@@ -7,11 +7,11 @@
             <div class="contact_form">
                 @using(Html.BeginForm("RegisterCustomer","Account",FormMethod.Post))
                 { 
-                    <div class="form_row">
-                        <strong>@Html.LabelFor(model => model.Name, new { @class = "contact_input" })</strong>
+                    <!--<div class="form_row">-->
+                        <strong>@Html.LabelFor(model => model.Name, new { @class = "form_row" })</strong>
                         @Html.TextBoxFor(model => model.Name, new { @class = "contact_input", Id = "username", required = "required" })
                         <input id="check" type="button" value="Check"/>
-                        <p id="avail"></p>
+                        <strong><p style="color:firebrick" id="avail"></p></strong>
                         <script>
                             $(document).ready(function () {
                                 $('#check').click(function () {
@@ -22,7 +22,7 @@
                                 });
                             });
                         </script>
-                    </div>
+                    <!--</div>-->
                     <div class="form_row">
                         <strong>@Html.LabelFor(model => model.Email, new { @class="contact_input"})</strong>
                         @Html.TextBoxFor(model => model.Email, new { @class = "contact_input",type="email", required = "required" })

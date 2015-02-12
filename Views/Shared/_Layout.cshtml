@@ -54,7 +54,7 @@
                     <li class="divider"></li>
                     <li>@Html.ActionLink("Specials", "details", "Home", null, new { @class = "nav3" })</li>
                     <li class="divider"></li>
-                    <li>@Html.ActionLink("My Account", "Signup", "Account",null ,new { @class="nav4"})</li>
+                    <li>@Html.ActionLink("My Account", "Signup", "Account", null, new { @class = "nav4" })</li>
                     <li class="divider"></li>
                     <li>@Html.ActionLink("Shipping", "Shippinginfo", "Info", null, new { @class = "nav5" })</li>
                     <li class="divider"></li>
@@ -71,25 +71,24 @@
             <!-- end of menu tab -->
             <div class="crumb_navigation"> Navigation: <span class="current">Home</span> </div>
             <div class="left_content">
-                <div class="title_box">Categories</div>
-
+                <div class="title_box" style="background-color:firebrick">Categories</div>
                 <form id="Cat" name="Cat" action="~/Home/CategoryDetail" method="post">
-                <!--<ul class="left_menu" id="Cat" name="Cat">-->
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " name="Submit" type="Submit" value="Processors"/><br/>
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="even" name="Submit" type="Submit" value="Motherboards" /><br />
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="odd" name="Submit" type="Submit" value="Desktop" /><br />
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="even" name="Submit" type="Submit" value="Laptop" /><br />
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="odd" name="Submit" type="Submit" value="others" /><br />
-                <!--</ul>-->
-                    </form>
+                    <ul class="left_menu" id="Cat">
+                        <li class="even"><input style="width:195px; border:ridge ;background: url(~/Image/menu_title_bg.gif) " name="Submit" type="Submit" value="Processors" /></li>
+                        <li class="odd"><input style="width: 195px; background: url(~/Image/menu_title_bg.gif);" class="even" name="Submit" type="Submit" value="Motherboards" /></li>
+                        <li class="even"><input style="width: 195px; border:ridge; background: url(~/Image/menu_title_bg.gif);" class="odd" name="Submit" type="Submit" value="Desktop" /></li>
+                        <li class="odd"><input style="width: 195px; background: url(~/Image/menu_title_bg.gif);" class="even" name="Submit" type="Submit" value="Laptop" /></li>
+                        <li class="even"><input style="width: 195px; border:ridge; background: url(~/Image/menu_title_bg.gif);" class="odd" name="Submit" type="Submit" value="others" /></li>
+                    </ul>
+                </form>
 
-                <div class="title_box">Special Products</div>
+                <div class="title_box" style="background-color:firebrick">Special Products</div>
                 <div class="border_box">
                     <div class="product_title"><a href="#">Motorola 156 MX-VL</a></div>
                     <div class="product_img"><a href="#"><img src="~/images/laptop.png" alt="" border="0" /></a></div>
                     <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
                 </div>
-                <div class="title_box">Newsletter</div>
+                <div class="title_box" style="background-color:firebrick">Newsletter</div>
                 <div class="border_box">
                     <input type="text" name="newsletter" class="newsletter_input" value="your email" />
                     <a href="#" class="join">join</a>
@@ -109,25 +108,35 @@
                     </div>
                     <div class="cart_icon"><a href="#" title="header=[Checkout] body=[&nbsp;] fade=[on]"><img src="~/images/shoppingcart.png" alt="" width="48" height="48" border="0" /></a></div>
                 </div>
-                <div class="title_box">What’s new</div>
+                <div class="title_box" style="background-color:firebrick">What’s new</div>
                 <div class="border_box">
                     <div class="product_title"><a href="#">Motorola 156 MX-VL</a></div>
                     <div class="product_img"><a href="#"><img src="~/images/p2.gif" alt="" border="0" /></a></div>
                     <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
                 </div>
-                <div class="title_box">Manufacturers</div>
+                <div class="title_box" style="background-color:firebrick">Manufacturers</div>
                 <form method="post" action="~/Home/BrandDetails">
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " name="Submit" type="Submit" value="Sony" /><br />
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="even" name="Submit" type="Submit" value="Samsung" /><br />
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="odd" name="Submit" type="Submit" value="Daewoo" /><br />
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="even" name="Submit" type="Submit" value="LG" /><br />
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="odd" name="Submit" type="Submit" value="Fujitsu" /><br />
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="odd" name="Submit" type="Submit" value="Motorola" /><br/>
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="even" name="Submit" type="Submit" value="Phillips" /><br />
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="odd" name="Submit" type="Submit" value="Beko" /><br />
-                    <input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="odd" name="Submit" type="Submit" value="Others" />
-                    <br />
-                    </form>
+                    <ul class="left_menu">
+                        <li class="even"><input style="width: 200px; border: ridge; background: url(~/Image/menu_title_bg.gif);" name="Submit" type="Submit" value="Sony" /></li>
+                        <li />
+                        <li class="odd"><input style="width: 200px; background: url(~/Image/menu_title_bg.gif);" class="even" name="Submit" type="Submit" value="Samsung" /></li>
+                        <li />
+                        <li class="even"><input style="width: 200px; border: ridge; background: url(~/Image/menu_title_bg.gif);" class="odd" name="Submit" type="Submit" value="Daewoo" /></li>
+                        <li />
+                        <li class="odd"><input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="even" name="Submit" type="Submit" value="LG" /></li>
+                        <li />
+                        <li class="even"><input style="width: 200px; border: ridge; background: url(~/Image/menu_title_bg.gif);" class="odd" name="Submit" type="Submit" value="Fujitsu" /></li>
+                        <li />
+                        <li class="odd"><input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="odd" name="Submit" type="Submit" value="Motorola" /></li>
+                        <li />
+                        <li class="even"><input style="width: 200px; border: ridge; background: url(~/Image/menu_title_bg.gif);" class="even" name="Submit" type="Submit" value="Phillips" /></li>
+                        <li />
+                        <li class="odd"><input style="width:200px; background: url(~/Image/menu_title_bg.gif) " class="odd" name="Submit" type="Submit" value="Beko" /></li>
+                        <li />
+                        <li class="even"><input style="width: 200px; border: ridge; background: url(~/Image/menu_title_bg.gif);" class="odd" name="Submit" type="Submit" value="Others" /></li>
+                        <li />
+                    </ul>
+                </form>
                 <div class="banner_adds"> <a href="#"><img src="~/images/bann1.jpg" alt="" border="0" /></a> </div>
             </div>
             <!-- end of right content -->
